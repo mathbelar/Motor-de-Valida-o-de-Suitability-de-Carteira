@@ -66,7 +66,7 @@ def test_cenario_alerta():
         {"ativo": "Ação ABC", "risco": 4.0, "valor_investido": 10000}
     ]
     
-    nova_ordem = {"ativo": "FII YYY", "risco": 3.5, "valor_ordem": 15000}
+    nova_ordem = {"ativo": "FII YYY", "risco": 4.8, "valor_ordem": 25000}
     
     resultado = validar_suitability(perfil, carteira, nova_ordem)
     
