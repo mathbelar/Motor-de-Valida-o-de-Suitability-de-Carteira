@@ -102,7 +102,6 @@ def test_cenario_rejeitado():
 
 def rodar_todos_testes():
 
-    print("\n" + "="*60)
     print("INICIANDO TESTES")
     print("="*60 + "\n")
     

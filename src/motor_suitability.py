@@ -11,11 +11,9 @@ def calcular_risco_carteira(carteira):
         for ativo in carteira
     )
     
-    # Evitar divisão por zero
     if valor_total == 0:
         return 0.0
     
-    # Retorna a média ponderada
     return soma_ponderada / valor_total
 
 def projetar_carteira_pos_compra(carteira_atual, nova_ordem):
@@ -63,7 +61,7 @@ def validar_suitability(perfil_cliente, carteira_atual, nova_ordem):
             "risco_projetado": risco_projetado,
             "score_maximo": score_maximo,
             "limite_alerta": limite_alerta,
-            "mensagem": "Ordem executada. Carteira em conformidade."
+            "mensagem": "Ordem executada."
         }
 
     elif risco_projetado <= limite_alerta:
@@ -73,7 +71,7 @@ def validar_suitability(perfil_cliente, carteira_atual, nova_ordem):
             "risco_projetado": risco_projetado,
             "score_maximo": score_maximo,
             "limite_alerta": limite_alerta,
-            "mensagem": f"Atenção: O risco da carteira ultrapassará o limite de {limite_alerta}. É necessário termo de ciência."
+            "mensagem": f"Atenção: O risco da carteira ultrapassará o limite de {limite_alerta}."
         }
     
         

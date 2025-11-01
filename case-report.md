@@ -1,0 +1,11 @@
+O motor de suitability tem como objetivo garantir que as operações de investimento estejam compatíveis com o perfil de risco de cada cliente, conforme exigido pela Resolução CVM nº 30. Além de avaliar novas ordens, o sistema também precisa lidar com situações de exceção e monitorar continuamente o risco das carteiras, assegurando conformidade e transparência no relacionamento com o investidor.
+
+Quando o cliente recebe o status “Alerta”, o sistema não deve executar automaticamente a ordem, pois o risco projetado ultrapassa o limite do perfil. Nesse caso, o ato de compra passa a ser manual e condicionado à assinatura do Termo de Ciência, garantindo que o investidor tenha ciência do risco antes de prosseguir. Essa exigência pode reduzir a velocidade de execução, mas é possível mitigar o impacto com assinatura eletrônica integrada ao sistema.
+
+Analisando o ponto de vista tecnológico, o sistema deve armazenar o Termo de Ciência no banco de dados, contendo dados de identificação do cliente, da ordem e da assinatura digital; criar logs imutáveis que comprovem a aceitação do termo; e restringir o acesso a áreas específicas, como Compliance e Jurídico. Essas medidas asseguram integridade e conformidade regulatória, além de proteger em eventuais auditorias.
+
+Para monitorar o desenquadramento passivo, o sistema da Genial pode integrar o motor de suitability ao seu módulo de monitoramento de mercado, de modo que o motor seja executado automaticamente sempre que houver variações relevantes nos preços ou no risco dos ativos da carteira.
+Dessa forma, a cada atualização de dados de mercado, seja em tempo real ou em intervalos definidos, o motor recalcula o risco ponderado das carteiras e identifica automaticamente os clientes cujo risco total ultrapassou o limite do perfil.
+Ao detectar o desenquadramento, o sistema registra o evento, gera um alerta e aciona os canais de comunicação para notificar o cliente.
+
+Em relação à comunicação com o cliente, cada canal possui vantagens e limitações próprias, sendo ideal a utilização integrada dos três: o App, para notificações rápidas e acessíveis; o E-mail, como meio formal; e o Assessor, como canal humano para casos críticos. Essa combinação equilibra agilidade, formalidade e relacionamento, garantindo eficiência na comunicação.
